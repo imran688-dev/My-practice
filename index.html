@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .sec {
+    background-color: blueviolet;
+    height: 500px;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    animation-name: colorChange;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+  }
+
+  .content-box {
+    padding: 30px;
+    margin: 200px 20px 0;
+    background-color: aqua;
+    transition: all .5s linear;
+
+  }
+
+  .content-box:nth-child(even) {
+    /* transform: scaleX(1.2); */
+    background-color: bisque;
+    animation: moveIn 2s linear infinite alternate forwards;
+  }
+
+  .content-box:hover {
+    /* transform: rotate(5deg); */
+    transform: translateY(-30px);
+    background-color: chartreuse;
+  }
+
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* @keyframes colorChange {
+    0% {
+      background-color: cadetblue;
+    }
+
+    25% {
+      background-color: brown;
+    }
+
+    50% {
+      background-color: black;
+    }
+
+    75% {
+      background-color: green;
+    }
+
+    100% {
+      background-color: yellow;
+    } */
+
+  /* } */
+
+
+  @keyframes moveIn {
+    form {
+      transform: rotateY(0);
+    }
+
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+</style>
+
+<body>
+  <section class="sec">
+    <div class="container">
+      <div class="content">
+        <div class="content-box">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est expedita officiis ab, eveniet magni sapiente
+            consectetur reprehenderit quidem ut consequatur. Dolore unde eius dicta iure!</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="content-box">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est expedita officiis ab, eveniet magni sapiente
+            consectetur reprehenderit quidem ut consequatur. Dolore unde eius dicta iure!</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="content-box">
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est expedita officiis ab, eveniet magni sapiente
+            consectetur reprehenderit quidem ut consequatur. Dolore unde eius dicta iure!</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
